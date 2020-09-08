@@ -2,7 +2,8 @@ import React, { Component } from 'react'
 import { NavLink, withRouter} from "react-router-dom";
 import logo from '../assets/Logo.png'
 import '../css/Navbar.css'
-import {MDBNavbar, MDBNavbarBrand, MDBNavbarNav,MDBNavbarToggler, MDBCollapse} from "mdbreact";
+import { MDBNavbar, MDBNavbarBrand, MDBNavbarNav, MDBNavItem, MDBNavLink, MDBNavbarToggler, MDBCollapse, MDBDropdown,
+  MDBDropdownToggle, MDBDropdownMenu, MDBDropdownItem, MDBIcon } from "mdbreact";
 import { MDBContainer, MDBBtn, MDBModal, MDBModalBody, MDBModalHeader, MDBModalFooter ,MDBCol,MDBRow} from 'mdbreact';
 import { Checkbox } from '@material-ui/core';
 
@@ -26,32 +27,40 @@ import { Checkbox } from '@material-ui/core';
         return (
   
       <MDBNavbar  className="navbar navbar-expand-lg navbar-light "  id='navbar' >
-        <MDBNavbarBrand>
-        <img src={logo} alt='logo' id='logo'/>
+<MDBContainer>
+<MDBNavbarBrand>
+<img src={logo} alt='logo' className='logo'/>
         </MDBNavbarBrand>
+     
         <MDBNavbarToggler  onClick={this.toggleCollapse} />
         <MDBCollapse  isOpen={this.state.isOpen} navbar>
         
-           <MDBNavbarNav right  >
-           <div class="navbar-nav ml-auto topnav"   >
-           
-              <NavLink to="/" className='tabs' id='home'>Home</NavLink>
+           <MDBNavbarNav right className="menudiv">
+             <MDBNavItem>
+              <MDBNavLink to="/" id="home">Home</MDBNavLink>
+            </MDBNavItem>
+
+            <MDBNavItem>
+              <MDBNavLink to="/aboutus" id='aboutus'>About Us</MDBNavLink>
+            </MDBNavItem>
+            <MDBNavItem>
+              <MDBNavLink to="/features" id='features'>Features</MDBNavLink>
+            </MDBNavItem>
+            <MDBNavItem>
+              <MDBNavLink to="/Pricing"  id='pricing'>Pricing</MDBNavLink>
+            </MDBNavItem>
+            <MDBNavItem>
+              <MDBNavLink to="/support"  id='support'>Support</MDBNavLink>
+            </MDBNavItem>
+            <MDBNavItem>
+              <MDBNavLink to="/support"  id='support'>Support</MDBNavLink>
+            </MDBNavItem>
+         
+            <MDBNavItem>
+              <MDBNavLink to="/signin"  id='signin' onClick={this.toggle}>Sign in</MDBNavLink>
+            </MDBNavItem>
+             
               
-              
-              <NavLink to="/about us" className='tabs' id='aboutus'>About Us</NavLink>
-              
-              
-              <NavLink to="/features" className='tabs' id='features'> Features</NavLink>
-              
-              
-              <NavLink to="/Pricing" className='tabs' id='pricing'>Pricing</NavLink>
-              
-              
-              <NavLink to="/support" className='tabs' id='support'>Support</NavLink>
-              <NavLink to="/signin" className='tabs' id='signin' onClick={this.toggle}>Sign in</NavLink>
-              
-              
-              <MDBContainer >
                 
                        
                            
@@ -60,7 +69,7 @@ import { Checkbox } from '@material-ui/core';
                                 <span></span>
                                 <span id='signin_header_heading'>Log In</span>
                             </MDBModalHeader>
-                            <MDBModalBody style={{marginLeft:'30px',borderRadius: '10px'}} >
+                            <MDBModalBody style={{borderRadius: '10px'}} >
                             <div className='signin_body_heading' >
                             Email
                             </div>
@@ -79,15 +88,16 @@ import { Checkbox } from '@material-ui/core';
 
                             </MDBModalBody>
                         </MDBModal>
-                        </MDBContainer>
+                      
               
                           <button id='demo_box' className='demo'>
                           Book A Demo
                           </button>
               
-              </div>
+             
           </MDBNavbarNav>
         </MDBCollapse>
+        </MDBContainer>
       </MDBNavbar>
            
         )

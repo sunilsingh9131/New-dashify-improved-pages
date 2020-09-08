@@ -1,277 +1,491 @@
 import React, { Component } from 'react'
+import Slider from "react-slick";
 import '../css/Home.css'
-import arrow from '../assets/arrow.png'
-import home_icon1 from '../assets/home_icon1.png'
-import home_icon2 from '../assets/home_icon2.png'
-import home_icon3 from '../assets/home_icon3.png'
-import home_icon4 from '../assets/home_icon4.png'
-import home_icon5 from '../assets/home_icon5.png'
-import home_icon6 from '../assets/home_icon6.png'
-import home_icon7 from '../assets/home_icon7.png'
-import home_icon8 from '../assets/home_icon8.png'
-import home_icon9 from '../assets/home_icon9.png'
-import home_icon10 from '../assets/home_icon10.png'
-import home_icon11 from '../assets/home_icon11.png'
-import home_icon12 from '../assets/home_icon12.png'
-import home_icon13 from '../assets/home_icon13.png'
-import home_icon14 from '../assets/home_icon14.png'
-import home_icon15 from '../assets/home_icon15.png'
-import home_blog1 from '../assets/home_blog1.png'
-import home_blog2 from '../assets/home_blog2.png'
-import home_blog3 from '../assets/home_blog3.png'
-import home_cf1 from '../assets/home_cf1.png'
-import home_cf2 from '../assets/home_cf2.png'
-import home_cf3 from '../assets/home_cf3.png'
-import home_cf4 from '../assets/home_cf4.png'
-import down_arrow from '../assets/down_arrow.png'
-import home_line from '../assets/home_line.png'
+
 
 export default class Home extends Component {
     render() {
+        var settings = {
+            dots: false,
+            infinite: true,
+            arrows: true,
+            speed: 500,
+            slidesToShow: 4,
+            slidesToScroll: 1,
+            responsive: [
+                {
+                  breakpoint: 320,
+                  settings: { slidesToShow: 1, slidesToScroll: 1, infinite: false }
+                },
+                {
+                  breakpoint: 768,
+                  settings: { slidesToShow: 2, slidesToScroll: 2, infinite: false }
+                },
+                {
+                  breakpoint: 1024,
+                  settings: { slidesToShow: 3, slidesToScroll: 3, infinite: false }
+                }
+              ]
+            
+          };
+
+
+          var settings1 = {
+            dots: true,
+            infinite: true,
+            arrows: true,
+            speed: 500,
+            slidesToShow: 5,
+            slidesToScroll: 1,
+            responsive: [
+                {
+                  breakpoint: 320,
+                  settings: { slidesToShow: 1, slidesToScroll: 1, infinite: false }
+                },
+                {
+                  breakpoint: 768,
+                  settings: { slidesToShow: 2, slidesToScroll: 2, infinite: false }
+                },
+                {
+                  breakpoint: 1024,
+                  settings: { slidesToShow: 3, slidesToScroll: 3, infinite: false }
+                }
+              ]
+            
+          };
+
+
         return (
             <div>
-                <div id='home_heading1' >One Place, All Business</div>
-                <div id='home_contant1' > 
-                    <p>
-                    Having everything in one place means organization, simplifying business and more time
-                     spent on the important stuff Dashify organize, update and keep track of all your
-                      information and social pages from one convenient dashboard. Effortlessly.
-                    </p>
-                </div>
-                <div>
-                          <button id='home_book_demo_box' className='home_book_demo'>
-                          Book A Demo
-                          </button>
-                        </div>
-                        <div >
-                          <button id='home_learn_more_box' className='home_learn_more'>
-                          Learn more
-                          </button>
-                        </div>
-                        <div id='home_heading2' className='home_heading'>Check How Your Business Appears Online </div>
-                          <div>
-                          <div id='bussiness_box'/>
-                          <div id='bussiness_select1'>Choose country</div>
-                          <img src={down_arrow} alt='down_arrow' id='home_down_arrow1'/>
-                          <div id='bussiness_select2'>Business Name</div>
-                          <img src={down_arrow} alt='down_arrow' id='home_down_arrow2'/>
-                          <img src={home_line} alt='home_line' id='home_line'/>
-                          <div id='bussiness_select3'>Business Type</div>
-                          <img src={down_arrow} alt='down_arrow' id='home_down_arrow3'/>
+                <div className="banner">
+<div className="container">
+    <div className="row">
+    <div className="col-md-6">
+<h2>One Place, All Business</h2>
+<p> Having everything in one place means organization, simplifying business and more time spent on the important stuff Dashify organize, update and keep track of all your information and social pages from one convenient dashboard. Effortlessly.</p>
+<div className="banner-btn">
+    <a href="#" className="book_btn">Book A Demo </a>
+    <a href="#" className="learn_btn">Learn more </a>
+</div>
+</div>
+<div className="col-md-6">
+<div className="search-box">
+ <input type="text" placeholder="Coffe Shop with free wifi near me"/> 
+ <button><i className="fa fa-search"></i></button>  
+</div>
 
-                          <button id='home_scan_box' className='home_scan'>
-                          Scan now
-                          </button>
-                          </div>
-                        <div id='home_heading3' className='home_heading'>What Dashify Features </div>
-                         <div>
-                         <div id='home_card1'/>
-                         <div id='home_num_card1' className='home_numbers'>01</div>
-                        <div id='home_card_heading1' className='home_card_heading'>Management</div>
-                        <div id='home_card_subhead1' className='home_card_subhead'>Keep it streamlined</div>
-                        <div id='home_card_contant1' className='home_card_contant'>
-                            <p>
-                            Manage everything effortlessy from one place at any time. Dashify was designed 
-                            with streamlined simplicity in mind.
-                            </p>
-                        </div>
-                        </div>
-                        <div>
-                        <div id='home_card2'/>
-                        <div id='home_num_card2' className='home_numbers'>02</div>
-                       <div id='home_card_heading2' className='home_card_heading'>Review tracker</div>
-                        <div id='home_card_subhead2' className='home_card_subhead'>Who said that?</div>
-                        <div id='home_card_contant2' className='home_card_contant'>
-                            <p>
-                            What it good? Was it bad? Whatever they thought, see it instantly by tracking 
-                            business reviews and keeping an eye on who said what.
-                            </p>
-                        </div> 
-                        </div>
-                        <div>
-                        <div id='home_card3'/>
-                        <div id='home_num_card3' className='home_numbers'>03</div>
-                       <div id='home_card_heading3' className='home_card_heading'>Promotion </div>
-                        <div id='home_card_subhead3' className='home_card_subhead'>Making business louder</div>
-                        <div id='home_card_contant3' className='home_card_contant'>
-                            <p>
-                            Promotion can make or break a business. Get your seen, heard and clicked with the
-                             right promotion, all from the convenience of one place.
-                            </p>
-                        </div> 
-                        </div>
-                        <div>
-                        <div id='home_card4'/>
-                        <div id='home_num_card4' className='home_numbers'>04</div>
-                       <div id='home_card_heading4' className='home_card_heading'>Notification feed</div>
-                        <div id='home_card_subhead4' className='home_card_subhead'>Instant interaction</div>
-                        <div id='home_card_contant4' className='home_card_contant'>
-                            <p>
-                            Interact with your target audience, customers and clients instantly by keeping on 
-                            top of all notifications on every platform. You’ll never miss another ding. 
-                            </p>
-                        </div> 
-                        </div>
-                        <div>
-                        <div id='home_card5'/>
-                        <div id='home_num_card5' className='home_numbers'>05</div>
-                       <div id='home_card_heading5' className='home_card_heading'>Analytics</div>
-                        <div id='home_card_subhead5' className='home_card_subhead'>Prioritize</div>
-                        <div id='home_card_contant5' className='home_card_contant'>
-                            <p>
-                            Performance is paramount, and Dashify keep an eye on it for you. With complete 
-                            precision, monitor how well you’re doing at any time with astute and accurate 
-                            analytics.
-                            </p>
-                        </div> 
-                        </div> 
-                        <div id='learn_more'> Learn more</div>
-                        <img src={arrow} alt='arrow' id='home_arrow1'/>
-                        <div id='home_heading4' className='home_heading'>Sync Your Business</div>
-                        <div id='home_contant2' className='home_contant'>
-                            Connect your business with all these great apps from one dashboard
-                            </div>
-                        <img src={home_icon1} alt='home_icon1' id='home_icon1'/>
-                        <img src={home_icon2} alt='home_icon2' id='home_icon2'/>
-                        <img src={home_icon3} alt='home_icon3' id='home_icon3'/>
-                        <img src={home_icon4} alt='home_icon4' id='home_icon4'/>
-                        <img src={home_icon5} alt='home_icon5' id='home_icon5'/>
-                        <img src={home_icon6} alt='home_icon6' id='home_icon6'/>
-                        <img src={home_icon7} alt='home_icon7' id='home_icon7'/>
-                        <img src={home_icon8} alt='home_icon8' id='home_icon8'/>
-                        <img src={home_icon9} alt='home_icon9' id='home_icon9'/>
-                        <img src={home_icon10} alt='home_icon10' id='home_icon10'/>
-                        <img src={home_icon11} alt='home_icon11' id='home_icon11'/>
-                        <img src={home_icon12} alt='home_icon12' id='home_icon12'/>
-                        <img src={home_icon13} alt='home_icon13' id='home_icon13'/>
-                        <img src={home_icon14} alt='home_icon14' id='home_icon14'/>
-                        <img src={home_icon15} alt='home_icon15' id='home_icon15'/>
-                        <div id='many_more'>Many more</div>
-                        <img src={arrow} alt='arrow' id='home_arrow2'/>
-                        <button id='home_get_started_box' className='home_get_started'>
-                        Get started
-                          </button>
+</div>
 
-                        <div id='home_heading5' className='home_heading'>Trusted By Companies</div>
-                        <div  id='home_contant3' className='home_contant'>
-                        With our mission in mind we are leading brands into the future of search
-                        </div>
-                        <div id='cust_stories'>See customer stories</div>
-                        <img src={arrow} alt='arrow' id='home_arrow3'/>
-                        <div id='home_heading6' className='home_heading'>Specializing In Brand Awareness</div>
-                        <div  id='home_contant4' className='home_contant'>
-                        Restaurants, Hotels, Retail, Healthcare, Home Improvement Automative, Fincanical, Many more
-                        </div>
-                        <div id='home_heading7' className='home_heading'>Blog</div>
-                        <div  id='home_contant5' className='home_contant'>
-                        Dashify occasionally accepts articles from guest writers to complement our blog.
-                         If you wish to submit an article for consideration, please first check our
-                          contributor guidelines.
-                        </div>
-                        <div>
-                    <span id='home_month1'>
-                    September 2020
-                    </span>
-                    <span id='home_month2'>
-                    August 2020
-                    </span>
-                    <img src={arrow} alt='arrow' id='home_arrow4'/>
-                </div>
-                <hr id='home_hr'/>
-                <div>
-                <div id='home_blog_card1'/>
-                <img src={home_blog1} alt='home_blog' id='blog_img1'/>
-                <div id='home_blog_heading1'>
-                Google’s Latest API Update: Specify Service Items for Your Business
-                </div>
-                <div id='home_blog_contant1'>
-                On April 27th 2020, Google launched version 4.6 of its Google My Business (GMB) API for...
-                </div>
+    </div>
+
+
+</div>
+
                 </div>
 
 
-                <div>
-                <div id='home_blog_card2'/>
-                <img src={home_blog2} alt='home_blog' id='blog_img2'/>
-                <div id='home_blog_heading2'>
-                4 Reasons Search Is the Most Critical Issue for Your Brand This Year
-                </div>
-                <div id='home_blog_contant2'>
-                With 90% of consumers reporting that they use search at every stage of the customer lifecycle...
-                </div>
-                </div>
+<div className="bookingbox">
+    <div className="criclle"></div>
+    <div className="criclle2"></div>
+<div className="container">
+<h2>Check How Your Business <br />Appears Online</h2>
+<div className="checkabilty">
+  <select>
+    <option>Choose country</option>
+    <option>Choose country</option>
+    <option>Choose country</option>  
+      </select> 
+      <select>
+    <option>Business Name</option>
+    <option>Business Name</option>
+    <option>Business Name</option>  
+      </select> 
+      <input type="text" placeholder="search"/>
+      <select>
+    <option>Business Type</option>
+    <option>Business Type</option>
+    <option>Business Type</option>  
+      </select>
+      <button>Scan now</button>
 
-                <div>
-                <div id='home_blog_card3'/>
-                <img src={home_blog3} alt='home_blog' id='blog_img3'/>
-                <div id='home_blog_heading3'>
-                3 Moments That Make or Break a Customer’s Trust in a Brand
-                </div>
-                <div id='home_blog_contant3'>
-                Building brand trust is of the utmost importance for businesses. It fosters loyalty with existing...
-                </div>
-                </div>
-                <div id='all_article'>Read all articles</div>
-                        <img src={arrow} alt='arrow' id='home_arrow5'/>
-                <div id='home_heading8' className='home_heading'>We Appreciate Our Customer`s Feedbacks!</div>
-                <div  id='home_contant6' className='home_contant'>
-                    Here’s what some of our customers say about our work.
+</div>
+
+</div>
+
+</div>
+
+<div className="features">
+    <div className="container position">
+        <div className="criclboxs"></div>
+        <h2>What Dashify Features</h2>
+        <div className="row">
+            <div className="col-md-4">
+              <div className="feature-text">
+                  <div className="onestep">01</div>
+                  <h4>Management</h4>
+                  <span>Keep it streamlined</span>
+                  <p>Manage everything effortlessy from one place at any time. Dashify was designed with streamlined simplicity in mind. </p>
+                  </div>  
+            </div>
+            <div className="col-md-4">
+              <div className="feature-text">
+                  <div className="onestep2">02</div>
+                  <h4>Review tracker</h4>
+                  <span>Who said that?</span>
+                  <p>What it good? Was it bad? Whatever they thought, see it instantly by tracking business reviews and keeping an eye on who said what. </p>
+                  </div>  
+            </div>
+
+
+            <div className="col-md-4">
+              <div className="feature-text">
+                  <div className="onestep2">03</div>
+                  <h4>Promotion</h4>
+                  <span>Making business louder</span>
+                  <p>Promotion can make or break a business. Get your seen, heard and clicked with the right promotion, all from the convenience of one place.</p>
+                  </div>  
+            </div>
+
+            <div className="col-md-4">
+              <div className="feature-text">
+                  <div className="onestep2">04</div>
+                  <h4>Notification feed</h4>
+                  <span>Instant interaction</span>
+                  <p>Interact with your target audience, customers and clients instantly by keeping on top of all notifications on every platform. You’ll never miss another ding.</p>
+                  </div>  
+            </div>
+
+            <div className="col-md-4">
+              <div className="feature-text">
+                  <div className="onestep2">05</div>
+                  <h4>Analytics</h4>
+                  <span>Prioritize</span>
+                  <p>Performance is paramount, and Dashify keep an eye on it for you. With complete precision, monitor how well you’re doing at any time with astute and accurate analytics.</p>
+                  </div>  
+            </div>
+
+            <div className="col-md-4">
+              <div className="learn-more"><a href="#">Learn More <img src={require('../assets/arrow.png')} alt=""/></a></div> 
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<div className="client-name">
+    <div className="container">
+        <h2>Sync Your Business</h2>
+        <p>Connect your business with all these great apps from <br />one dashboard </p>
+        <div className="client-box">
+<ul>
+    <li><a href="#"><img src={require('../assets/home_icon1.png')} alt="" /></a></li>
+    <li><a href="#"><img src={require('../assets/home_icon2.png')} alt="" /></a></li>
+    <li><a href="#"><img src={require('../assets/home_icon3.png')} alt="" /></a></li>
+    <li><a href="#"><img src={require('../assets/home_icon4.png')} alt="" /></a></li>
+    <li><a href="#"><img src={require('../assets/home_icon5.png')} alt="" /></a></li>
+    <li><a href="#"><img src={require('../assets/home_icon6.png')} alt="" /></a></li>
+    <li><a href="#"><img src={require('../assets/home_icon7.png')} alt="" /></a></li>
+    <li><a href="#"><img src={require('../assets/home_icon8.png')} alt="" /></a></li>
+    <li><a href="#"><img src={require('../assets/home_icon9.png')} alt="" /></a></li>
+    <li><a href="#"><img src={require('../assets/home_icon10.png')} alt="" /></a></li>
+    <li><a href="#"><img src={require('../assets/home_icon11.png')} alt="" /></a></li>
+    <li className="icc"><a href="#"><img src={require('../assets/home_icon12.png')} alt="" /></a></li>
+    <li className="manta"><a href="#"><img src={require('../assets/home_icon13.png')} alt="" /></a></li>
+    <li><a href="#"><img src={require('../assets/home_icon14.png')} alt="" /></a></li>
+    <li><a href="#"><img src={require('../assets/home_icon15.png')} alt="" /></a></li>
+    
+    
+</ul>
+
+
+        </div>
+        <div className="manybox">
+    <a href="#" className="many_btn">Many More <img src={require('../assets/arrow.png')} alt=""/></a>
+</div>
+<div className="buttonbox text-center">
+    <button className="get_btn">Get started</button>
+</div>
+    </div>
+</div>
+<div className="trusted">
+    <div className="container">
+        <h2>Trusted By Companies</h2>
+        <p>With our mission in mind we are leading brands<br /> into the future of search </p>
+
+        <Slider {...settings}>
+        <div className="slide"><img src={require('../assets/slide-logo-1.png')} alt="" /></div>
+      <div className="slide"><img src={require('../assets/slide-logo-2.png')} alt="" /></div>
+      <div className="slide"><img src={require('../assets/slide-logo-3.png')} alt="" /></div>
+      <div className="slide"><img src={require('../assets/slide-logo-4.png')} alt="" /></div>
+      <div className="slide"><img src={require('../assets/slide-logo-5.png')} alt="" /></div>
+     
+      </Slider>
+
+
+
+        {/*<div className="customer-logos slider">
+      <div className="slide"><img src={require('../assets/slide-logo-1.png')} alt="" /></div>
+      <div className="slide"><img src={require('../assets/slide-logo-2.png')} alt="" /></div>
+      <div className="slide"><img src={require('../assets/slide-logo-3.png')} alt="" /></div>
+      <div className="slide"><img src={require('../assets/slide-logo-4.png')} alt="" /></div>
+      <div className="slide"><img src={require('../assets/slide-logo-5.png')} alt="" /></div>
+      <div className="slide"><img src={require('../assets/slide-logo-1.png')} alt="" /></div>
+     </div>*/}
+
+     <div className="boxc">
+     <a href="#">See customer stories <img src={require('../assets/arrow.png')} alt=""/></a>
+     </div>
+
+
+
+
+    </div>
+</div>
+<div className="bg-1"></div>
+<div className="brand">
+<div className="criclle"></div>
+<div className="criclle2"></div>
+<div className="container">
+    <h2>Specializing In Brand Awareness</h2>
+    <p>Restaurants, Hotels, Retail, Healthcare, Home Improvement<br /> Automative, Fincanical, Many more</p>
+
+    <Slider {...settings1} className="brand-slider">
+    <div className="slide">
+<div className="brand-box">
+    <div className="brand-img">
+        <img src={require('../assets/brand-1.png')} alt=""/>
+    </div>
+    <div className="brand-text">
+    <img src={require('../assets/icon-1.jpg')} alt=""/> 
+    <h5>Hotels</h5>
+    </div>
+
+</div>
+
+      </div>
+
+      <div className="slide">
+<div className="brand-box">
+    <div className="brand-img">
+        <img src={require('../assets/brand-2.png')} alt=""/>
+    </div>
+    <div className="brand-text">
+    <img src={require('../assets/icon-2.jpg')} alt=""/> 
+    <h5>Restaurant</h5>
+    </div>
+
+</div>
+
+      </div>
+
+      <div className="slide">
+<div className="brand-box">
+    <div className="brand-img">
+        <img src={require('../assets/brand-3.png')} alt=""/>
+    </div>
+    <div className="brand-text">
+    <img src={require('../assets/cart.jpg')} alt=""/> 
+    <h5>Retail</h5>
+    </div>
+
+</div>
+
+      </div>
+
+      <div className="slide">
+<div className="brand-box">
+    <div className="brand-img">
+        <img src={require('../assets/brand-4.png')} alt=""/>
+    </div>
+    <div className="brand-text">
+    <img src={require('../assets/icon-5.png')} alt=""/> 
+    <h5>Financial</h5>
+    </div>
+
+</div>
+
+      </div>
+
+      <div className="slide">
+<div className="brand-box">
+    <div className="brand-img">
+        <img src={require('../assets/brand-5.png')} alt=""/>
+    </div>
+    <div className="brand-text">
+    <img src={require('../assets/icon-4.jpg')} alt=""/> 
+    <h5>Health care</h5>
+    </div>
+
+</div>
+
+      </div>
+
+
+      <div className="slide">
+<div className="brand-box">
+    <div className="brand-img">
+        <img src={require('../assets/brand-1.png')} alt=""/>
+    </div>
+    <div className="brand-text">
+    <img src={require('../assets/icon-1.jpg')} alt=""/> 
+    <h5>Hotels</h5>
+    </div>
+
+</div>
+
+      </div>
+      </Slider>
+   
+</div>
+</div>
+<div className="bg-2"></div>
+
+<div className="blog">
+    
+    <div className="container position">
+    <div className="blog-cricle"></div>
+        <h2 className="heading">Blog</h2>
+        <p>Dashify occasionally accepts articles from guest writers to complement<br />
+         our blog. If you wish to submit an article for consideration, please <br /> 
+         first check our <a href="#">contributor guidelines.</a></p>
+    <div className="tmt">
+        <ul>
+            <li><b>September 2020</b> </li>
+            <li>August 2020 <img src={require('../assets/arrow.png')} alt=""/></li>
+        </ul>
+    </div>
+<div className="row">
+    <div className="col-md-6">
+        <div className="text-blog">
+         <div className="blog-img">
+            <img src={require('../assets/blog1.png')} alt=""/> 
+             </div>
+             <div className="text-descripton">
+               <h5>Google’s Latest API Update: Specify Service Items for Your Business </h5> 
+               <p>On April 27th 2020, Google launched version 4.6 of its Google My Business (GMB) API for... </p> 
+                 </div>   
+        </div>
+    </div>
+
+    <div className="col-md-6">
+        <div className="text-blog">
+         <div className="blog-img">
+            <img src={require('../assets/blog2.png')} alt=""/> 
+             </div>
+             <div className="text-descripton">
+               <h5>4 Reasons Search Is the Most Critical Issue for Your Brand This Year</h5> 
+               <p> With 90% of consumers reporting that they use search at every stage of the customer lifecycle...</p> 
+                 </div>   
+        </div>
+    </div>
+
+    <div className="col-md-6">
+        <div className="text-blog">
+         <div className="blog-img">
+            <img src={require('../assets/blog3.png')} alt=""/> 
+             </div>
+             <div className="text-descripton">
+               <h5>3 Moments That Make or Break a Customer’s Trust in a Brand</h5> 
+               <p>Building brand trust is of the utmost importance for businesses. It fosters loyalty with existing... </p> 
+                 </div>   
+        </div>
+    </div>
+
+    <div className="col-md-6">
+    <div className="heigh_blog">
+        <a href="#" className="many_btn">Read all articles <img src={require('../assets/arrow.png')} alt=""/></a>
+        </div>
+    </div>
+
+
+
+</div>
+
+    </div>
+</div>
+<div className="feedback-box">
+    <div className="container">
+        <h2 className="heading">We Appreciate Our Customer`s Feedbacks!</h2>
+        <p className="lead-text"> Here’s what some of our customers say about our work.</p>
+        <div className="row top-50">
+            <div className="col-md-6">
+                <div className="feed-box">
+                    <div className="feed-img">
+                        <img src={require('../assets/home_cf1.png')} alt=""/>
                     </div>
-                    <div>
-                <div id='cf_card1'/>
-                <img src={home_cf1} alt='home_cf' id='cf_img1'/>
-                <div id='cf_contant1'>
-                We believe that Dashify is the tool that will help keep our brand information up to date and
-                 consistent across the web, and allow us to keep scaling up our local SEO efforts!
-                </div>
-                <div id='cf_name1'>
-                Abram George
-                </div>
-                <div id='cf_comp_name1'> Company name</div>
+                <div className="feed-text">
+                    <div className="webox">
+                    <p>We believe that Dashify is the tool that will help keep our brand information up to date and consistent across the web, and allow us to keep scaling up our local SEO efforts!</p>
+               <h5>Abram George</h5>
+               <span>Company name</span>
+               </div>
                 </div>
 
-                <div>
-                <div id='cf_card2'/>
-                <img src={home_cf2} alt='home_cf' id='cf_img2'/>
-                <div id='cf_contant2'>
-                We have gone to great lengths to manage all our retail stores internally, from a central 
-                database. We have a centralized system with checks and balances in place, so it all flows 
-                out from that one database as a source of truth. Dashify came in and helped us do that
                 </div>
-                <div id='cf_name2'>
-                Rose Mango
-                </div>
-                <div id='cf_comp_name2'> Company name</div>
+            </div>
+
+
+            <div className="col-md-6">
+                <div className="feed-box">
+                    <div className="feed-img">
+                        <img src={require('../assets/home_cf2.png')} alt=""/>
+                    </div>
+                <div className="feed-text">
+                    <div className="webox">
+                    <p>We have gone to great lengths to manage all our retail stores internally, from a central database. We have a centralized system with checks and balances in place, so it all flows out from that one database as a source of truth. Dashify came in and helped us do that</p>
+               <h5>Rose Mango</h5>
+               <span>Company name</span>
+               </div>
                 </div>
 
-                <div>
-                <div id='cf_card3'/>
-                <img src={home_cf3} alt='home_cf' id='cf_img3'/>
-                <div id='cf_contant3'>
-                Dashify is now fundamentally embedded into our marketing initiatives and digital presence
-                 system. The purpose of our digital presence is to drive diners into our actual restaurant 
-                 locations time and again, and that is where Dashify's platform is invaluable 
                 </div>
-                <div id='cf_name3'>
-                Marcus Bergson
-                </div>
-                <div id='cf_comp_name3'> Company name</div>
-                </div>
-
-                <div>
-                <div id='cf_card4'/>
-                <img src={home_cf4} alt='home_cf' id='cf_img4'/>
-                <div id='cf_contant4'>
-                Smart and easy to use!
-                </div>
-                <div id='cf_name4'>
-                Roger Curtis
-                </div>
-                <div id='cf_comp_name4'> Company name</div>
+            </div>
+            <div className="col-md-6">
+                <div className="feed-box">
+                    <div className="feed-img">
+                        <img src={require('../assets/home_cf3.png')} alt=""/>
+                    </div>
+                <div className="feed-text">
+                    <div className="webox">
+                    <p>Dashify is now fundamentally embedded into our marketing initiatives
+                         and digital presence system. The purpose of our digital presence is to drive diners into our actual restaurant locations time and again,
+                         and that is where Dashify's platform is invaluable</p>
+               <h5>Marcus Bergson</h5>
+               <span>Company name</span>
+               </div>
                 </div>
 
-                    <div id='read_more'>Read more</div>
-                        <img src={arrow} alt='arrow' id='home_arrow6'/>
+                </div>
+            </div>
+
+            <div className="col-md-6">
+                <div className="feed-box">
+                    <div className="feed-img">
+                        <img src={require('../assets/home_cf4.png')} alt=""/>
+                    </div>
+                <div className="feed-text">
+                    <div className="webox">
+                    <p>Smart and easy to use!</p>
+               <h5>Roger Curtis</h5>
+               <span>Company name</span>
+               </div>
+                </div>
+
+                </div>
+            </div>
+
+            <div className="col-md-12 text-center mt-50">
+            <a href="#" className="many_btn">Read more <img src={require('../assets/arrow.png')} alt=""/></a>
+            </div>
+
+
+        </div>
+    </div>
+</div>
+
+
+
+                
             </div>
         )
     }

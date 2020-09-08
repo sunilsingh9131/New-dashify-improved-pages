@@ -1,95 +1,39 @@
-#logo{
-  position: absolute;
-  width: 207px;
-  height: 87px;
-  left: 191px;
-  top: 29px;
+.logo {
   mix-blend-mode: normal;
-
+  max-width: 100%;
 }
 
-.tabs{
-   
-    top: 65px;
-font-family: Roboto;
-font-style: normal;
-font-weight: 500;
-font-size: 18px;
-line-height: 21px;
-/* identical to box height */
 
 
-color: #3E435D;
-}
-
-#home{
-  position: absolute;
-  width: 49px;
-  height: 21px;
-  left: 511px;
-}
-
-#aboutus{
-  position: absolute;
-  width: 74px;
-  height: 21px;
-  left: 601px;
-}
-#features{
-  position: absolute;
-width: 71px;
-height: 21px;
-left: 716px;
-}
-
-#pricing{
-  position: absolute;
-  width: 57px;
-  height: 21px;
-  left: 827px;
-}
-
-#support{
-  position: absolute;
-width: 65px;
-height: 21px;
-left: 924px;
-}
-
-#signin{
-  position: absolute;
-  width: 55px;
-  height: 21px;
-  left: 1029px;
-}
 #navbar{
     width: 100%;
     background: none;
-    height: 130px;  
+     
   }
- 
+  .navbar {
+    
+    margin: 0;
+}
+.navbar-light .navbar-brand {
+  
+  width: 207px;
+  height: 85px;
+  padding-top: 0px;
+}
 
 #demo_box{
 border: none;
 color: #F2F2F2;
-position: absolute;
-width: 199px;
-height: 58px;
-left: 1199px;
-top: 43px;
+padding: 5px 15px;
   background: linear-gradient(90.17deg, #5D80E2 0.17%, #73B6E5 99.89%);
   box-shadow: 0px 20px 40px rgba(130, 100, 198, 0.2);
   border-radius: 5px;
 }
-
+.navbar.navbar-light .breadcrumb .nav-item .nav-link:hover, .navbar.navbar-light .navbar-nav .nav-item .nav-link:hover {
+  color: #5D80E2 !important;
+}
 .demo{
-  position: absolute;
-  width: 114px;
-  height: 21px;
-  left: 1242px;
-  top: 61px;
-  
-  font-family: Roboto;
+font-family: Roboto;
   font-style: normal;
   font-weight: bold;
   font-size: 18px;
@@ -97,18 +41,26 @@ top: 43px;
   color: #FFFFFF;
 }
 
+.navbar-expand-lg .navbar-nav .nav-link {
+  font-size: 18px;
+  font-weight: 500;
+  color:#3E435D !important;
+}
+
+.menudiv li {
+  padding: 0px 10px;
+}
 #signin_container{
- 
+  margin: auto;
 width: 397px;
-height: 497px;
-left: 602px;
-top: 130px;
+
+
 box-shadow: 0px 50px 60px rgba(96, 76, 140, 0.15);
 border-radius: 10px;
 }
 
 #signin_header{
-    margin-top: -28px;
+    
   background: linear-gradient(270.01deg, #8264C6 5.49%, #5D80E2 92.71%);
   mix-blend-mode: normal;
   
@@ -120,13 +72,13 @@ border-radius: 10px;
     font-size: 40px;
     line-height: 47px;
     color: #FFFFFF;
-margin-left: 15px;
+
     mix-blend-mode: normal;
   }
   
   
   .signin_body_heading{
-    left: 654px;
+    
     font-family: Roboto;
     font-style: normal;
     font-weight: normal;
@@ -139,24 +91,26 @@ margin-left: 15px;
   
   
   .signin_inputbox{
-    width: 294px;
+    width: 100%;
     height: 52px;
-    left: 654px;
+    padding: 0px 6px;
       background: #FFFFFF;
       border: 1px solid rgba(0, 0, 0, 0.3);
       box-sizing: border-box;
       border-radius: 5px;
+      outline: none;
       
   
   }
   
   #signin_button{
       
-    width: 161px;
+    width: 100%;
     height: 50px;
     margin-top: 20px;
     margin-bottom: 20px;
   background: linear-gradient(90.17deg, #5D80E2 0.17%, #73B6E5 99.89%);
   border-radius: 5px;
+text-align: center;
   }
   

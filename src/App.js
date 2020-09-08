@@ -20,16 +20,16 @@ function App() {
       <Router>
    <Navbar/>
              <Route exact path="/" component={Home} />
-             <Route  path="/about us" component={Aboutus} />
+             <Route  path="/aboutus" component={Aboutus} />
              <Route  path="/pricing" component={Pricing} />
              <Route  path="/support" component={Support} />
              <Route  path="/blog" component={Blog} />
-             <Route  path="/contact us" component={Contactus} />
-             <Route  path="/how we work" component={How_we_work} />
-             <Route  path="/listing management" component={Listing_management} />
-             <Route  path="/our news" component={Our_news} />
-             <Route  path="/our team" component={Our_team} />
-             <Route  path="/review management" component={Review_management} />
+             <Route  path="/contactus" component={Contactus} />
+             <Route  path="/how-we-work" component={How_we_work} />
+             <Route  path="/listing-management" component={Listing_management} />
+             <Route  path="/our-news" component={Our_news} />
+             <Route  path="/our-team" component={Our_team} />
+             <Route  path="/review-management" component={Review_management} />
     <Footer/>
     </Router>
     </div>
