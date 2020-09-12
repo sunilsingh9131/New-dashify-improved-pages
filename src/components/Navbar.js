@@ -52,9 +52,7 @@ import { Checkbox } from '@material-ui/core';
             <MDBNavItem>
               <MDBNavLink to="/support"  id='support'>Support</MDBNavLink>
             </MDBNavItem>
-            <MDBNavItem>
-              <MDBNavLink to="/support"  id='support'>Support</MDBNavLink>
-            </MDBNavItem>
+            
          
             <MDBNavItem>
               <MDBNavLink to="/signin"  id='signin' onClick={this.toggle}>Sign in</MDBNavLink>
